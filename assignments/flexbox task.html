@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox</title>
+  </head>
+  <style>
+    .div1 {
+      justify-content: flex-end;
+      height: 100px;
+      display: flex;
+      background-color: rgb(4, 4, 53);
+    }
+     .div2 {
+      justify-content: flex-end;
+      width: 100%;
+      height: 80%;
+      display: flex;
+      background-color: rgb(4, 4, 53);
+    }
+    .divcontent {
+      justify-content: flex-start;
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 450px;
+      height: 80px;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+    }
+    .divcontent1 {
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 90%;
+      height: 80px;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: center;
+    }
+    .divcontent2 {
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 50%;
+      height: 80px;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: center;
+      justify-content: first baseline;
+    }
+    .divcontent3 {
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 90%;
+      height: 80%;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: right;
+      justify-content: first baseline;
+    }
+
+    .divcontent4 {
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 30%;
+      height: 80px;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .divcontent5 {
+      display: flex;
+       background-color: rgb(65, 133, 228);;
+      color: white;
+      width: 20%;
+      padding-left: 20px;
+      margin: auto;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .divcontent6 {
+      display: flex;
+       background-color: rgb(65, 133, 228);;
+      color: white;
+      width: 20%;
+      padding-left: 20px;
+      margin: auto;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    .divcontent6
+    {
+      font-size: medium;
+      color: white;
+      background-color: rgb(65, 133, 228);
+      display: flex;
+      width: 40%;
+      height: 90%;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: center;
+      justify-content: first baseline;
+    }
+    .greendiv 
+    
+    {
+      background-color: green;
+      color: white;
+      width: 50%;
+      padding-left: 20px;
+      margin: auto;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .greendiv2
+     {
+      background-color: green;
+      color: white;
+      width: 150px;
+      padding-left: 20px;
+      margin: auto;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .orange {
+     font-size: medium;
+      color: white;
+      background-color: rgb(244, 151, 11);
+      display: flex;
+      width: 80%;
+      height: 80%;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      /* text-align: right; */
+      justify-content: first baseline;
+    }
+    .orange1
+    {
+      font-size: medium;
+      color: white;
+      background-color: rgb(244, 151, 11);
+      display: flex;
+      width: 80%;
+      height: 200%;
+      padding: 0 15px;
+      margin: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      text-align: center;
+      justify-content: first baseline;
+    }
+    
+  </style>
+  <body>
+    <section>
+      <div class="div1">
+        <div class="divcontent">
+          <p>child</p>
+
+          <p>this is a some larger content</p>
+          <p>child</p>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <section>
+      <div class="div1">
+        <div class="divcontent1">
+          <p>child</p>
+
+          <p>child</p>
+          <p>child</p>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+    <section>
+      <div class="div1">
+        <div class="divcontent2">
+          <p>child</p>
+          <br />
+          <br />
+          <p>child</p>
+        </div>
+        <br />
+        <br />
+        <div class="greendiv">
+          <p>child</p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <section>
+      <div class="div1">
+        <div class="divcontent3">
+          <p>child</p>
+          <br />
+          <br />
+          <p>
+            now this a lot of content goes here and to be honet we shoud be warr
+            of chnages
+          </p>
+        </div>
+        <br />
+        <br />
+        <div class="greendiv2">
+          <p>child</p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <section>
+      <div class="div1">
+        <div class="divcontent4">
+          <p>child</p>
+          <p>child</p>
+          <p>child</p>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <section>
+        <div class="div1">
+            <div class="divcontent5">
+                <p>child</p>
+                <p>child</p>
+            </div>
+            <div class="orange">
+                <p>child</p>
+            </div>
+        </div>
+    </section>
+<br>
+<br>
+    <section>
+      <div class="div2"> 
+        <div class="divcontent6">
+          <p>child</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptatum nisi officiis, quisquam ipsum nulla animi placeat suscipit mollitia quam! Beatae aperiam dolor repellendus deserunt quis enim! Voluptatem, dolorem reiciendis.</p>
+      </div>
+      <div class="orange1">
+      <p>child</p>
+    </div>
+    </div>
+    
+      </section>
+  </body>
+</html>

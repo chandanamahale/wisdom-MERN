@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image gallery</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:#f658b4;;
+     .h1
+     {
+        text-align: center;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+     }
+    }
+    .gallery {
+      margin: 20px auto;
+      background-color: rgb(182, 13, 100);
+      padding: 15px;
+      border: 2px solid black;
+      display: grid;
+      width:80%;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap: 15px;
+    
+    }
+    .gallery img
+    {
+        width: 80%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50;
+        display: block;
+        }
+        
+    .gallery img:hover
+    {
+        transform: scale(1.08);
+    }
+  </style>
+  <body>
+    <h1 class="h1">my image gallery</h1>
+    <div class="gallery">
+  
+            <img src="./image1.jpg" alt="image1" />
+                <img src="./image2.jpg" alt="image1" />
+                    <img src="./image3.jpg" alt="image1" />
+                        <img src="./image4.jpg" alt="image1" />
+                           
+                            <img src="./image1.jpg" alt="image1" />
+                            <img src="./image2.jpg" alt="image1" />
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #111c33;
+    position: sticky;
+    top: 0;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar h2 span,
+.heading span,
+.home-content h1 span {
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* Home */
+.home {
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home-content h2 {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 5px 5px 5px 0;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.btn.outline {
+    background-color: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* Profile Circle */
+.profile {
+    text-align: center;
+}
+
+.profile-circle {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    font-size: 65px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile p {
+    color: #94a3b8;
+}
+
+/* Common Sections */
+.section {
+    padding: 70px 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.about-text {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+/* Skills */
+.skills-section {
+    background-color: #111c33;
+}
+
+.skill-container,
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.skill-card,
+.project-card,
+.education-card,
+.contact-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.skill-card {
+    width: 230px;
+}
+
+.skill-card h3,
+.project-card h3,
+.education-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    padding: 5px 0;
+    color: #cbd5e1;
+}
+
+/* Projects */
+.project-card {
+    width: 300px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.project-card .tech {
+    color: #38bdf8;
+    font-size: 13px;
+}
+
+/* Education */
+.education-card {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.education-card p {
+    color: #cbd5e1;
+}
+
+/* Contact */
+.contact-card {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    background-color: #111c33;
+    color: #94a3b8;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+
+    .skill-card,
+    .project-card {
+        width: 100%;
+    }
+}
