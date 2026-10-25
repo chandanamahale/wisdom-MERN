@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air India Clone Website</title>
+
+    <style>
+        /* ===== BASIC CSS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #faf7f3;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #b10e36;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #292929;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b10e36;
+        }
+
+        .login {
+            background-color: #b10e36;
+            color: white;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 5px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .login:hover {
+            background-color: #850b29;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 520px;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(50, 0, 20, 0.75),
+                    rgba(0, 0, 0, 0.10)
+                ),
+                url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 28px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #b10e36;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-btn:hover {
+            background-color: #850b29;
+        }
+
+        /* ===== BOOKING SECTION ===== */
+        .booking {
+            width: 88%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .section-title {
+            color: #8d1234;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .booking-options {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .booking-options label {
+            cursor: pointer;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            align-items: end;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .field label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-width: 0;
+            padding: 13px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            grid-column: 1 / -1;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #b10e36;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background-color: #850b29;
+        }
+
+        /* ===== COMMON SECTION ===== */
+        .offers,
+        .destinations,
+        .about,
+        .manage,
+        .checkin,
+        .login-section {
+            padding: 55px 6%;
+            scroll-margin-top: 85px;
+        }
+
+        .section-heading {
+            color: #8d1234;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* ===== OFFERS SECTION ===== */
+        .offer-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .offer-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            padding-bottom: 22px;
+        }
+
+        .offer-card img {
+            display: block;
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .offer-card h3 {
+            margin: 18px 18px 8px;
+            color: #8d1234;
+        }
+
+        .offer-card p {
+            margin: 0 18px 15px;
+        }
+
+        .offer-card a {
+            margin: 0 18px;
+            color: #b10e36;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* ===== DESTINATIONS SECTION ===== */
+        .destination-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .destination-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #eee;
+        }
+
+        .destination-card img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .destination-card h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 15px 15px;
+            color: white;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        /* ===== MANAGE BOOKING / CHECK-IN ===== */
+        .info-box {
+            max-width: 800px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-box p {
+            margin-bottom: 15px;
+        }
+
+        .info-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #b10e36;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background-color: #f0e6e0;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #3b1021;
+            color: white;
+            padding: 35px 6%;
+            text-align: center;
+        }
+
+        .footer h2 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== TABLET RESPONSIVE ===== */
+        @media (max-width: 950px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .booking-form {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .offer-container,
+            .destination-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 12px;
+            }
+
+            .nav-links {
+                gap: 12px 18px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 380px;
+                padding: 40px 6%;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+
+            .booking {
+                width: 92%;
+                padding: 22px;
+            }
+
+            .booking-form,
+            .offer-container,
+            .destination-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading,
+            .section-title {
+                font-size: 25px;
+            }
+
+            .offers,
+            .destinations,
+            .about,
+            .manage,
+            .checkin,
+            .login-section {
+                padding: 35px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== 1. NAVBAR ===== -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">✈ AIR INDIA</a>
+
+            <ul class="nav-links">
+                <li><a href="#booking">Book</a></li>
+                <li><a href="#manage">Manage Booking</a></li>
+                <li><a href="#checkin">Check-in</a></li>
+                <li><a href="#destinations">Where We Fly</a></li>
+            </ul>
+
+            <a href="#login" class="login">Login / Join</a>
+
+        </nav>
+    </header>
+
+
+    <!-- ===== 2. HERO SECTION ===== -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>Welcome to Air India</h1>
+            <p>Fly with us and discover the world.</p>
+
+            <a href="#booking" class="hero-btn">
+                Book Your Flight
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ===== 3. BOOKING SECTION ===== -->
+    <section class="booking" id="booking">
+
+        <h2 class="section-title">Book Your Flight</h2>
+
+        <div class="booking-options">
+            <label>
+                <input type="radio" name="trip" checked>
+                One Way
+            </label>
+
+            <label>
+                <input type="radio" name="trip">
+                Round Trip
+            </label>
+        </div>
+
+        <div class="booking-form">
+
+            <div class="field">
+                <label for="from">From</label>
+                <input type="text" id="from" placeholder="Departure city">
+            </div>
+
+            <div class="field">
+                <label for="to">To</label>
+                <input type="text" id="to" placeholder="Destination city">
+            </div>
+
+            <div class="field">
+                <label for="departure">Departure</label>
+                <input type="date" id="departure">
+            </div>
+
+            <div class="field">
+                <label for="passengers">Passengers</label>
+                <select id="passengers">
+                    <option>1 Adult</option>
+                    <option>2 Adults</option>
+                    <option>3 Adults</option>
+                    <option>4 Adults</option>
+                </select>
+            </div>
+
+            <button type="button" class="search-btn">
+                Search Flights
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== 4. OFFERS SECTION ===== -->
+    <section class="offers" id="offers">
+
+        <h2 class="section-heading">Discover Our Offers</h2>
+        <p class="section-description">
+            Find inspiration for your next journey.
+        </p>
+
+        <div class="offer-container">
+
+            <div class="offer-card">
+                <img
+                    src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80"
+                    alt="Airplane flying in the sky">
+
+                <h3>Explore the World</h3>
+                <p>Your next adventure starts here.</p>
+                <a href="#destinations">Explore More →</a>
+            </div>
+
+            <div class="offer-card">
+                <img
+                    src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=80"
+                    alt="Mountain destination">
+
+                <h3>Dream Destinations</h3>
+                <p>Discover beautiful places around the world.</p>
+                <a href="#destinations">Discover More →</a>
+            </div>
+
+            <div class="offer-card">
+                <img
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80"
+                    alt="Dubai city skyline">
+
+                <h3>Travel in Comfort</h3>
+                <p>Make every journey memorable.</p>
+                <a href="#about">Learn More →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== 5. DESTINATIONS SECTION ===== -->
+    <section class="destinations" id="destinations">
+
+        <h2 class="section-heading">Popular Destinations</h2>
+        <p class="section-description">
+            Get inspired for your next holiday.
+        </p>
+
+        <div class="destination-container">
+
+            <div class="destination-card">
+                <img
+                    src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=700&q=80"
+                    alt="Taj Mahal in India">
+                <h3>India</h3>
+            </div>
+
+            <div class="destination-card">
+                <img
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80"
+                    alt="Dubai skyline">
+                <h3>Dubai</h3>
+            </div>
+
+            <div class="destination-card">
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80"
+                    alt="Paris city">
+                <h3>Paris</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== 6. MANAGE BOOKING SECTION ===== -->
+    <section class="manage" id="manage">
+
+        <h2 class="section-heading">Manage Your Booking</h2>
+
+        <div class="info-box">
+            <p>
+                View your booking details or make changes to your
+                travel plans.
+            </p>
+
+            <a href="#booking" class="info-link">
+                Find My Trip
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ===== 7. CHECK-IN SECTION ===== -->
+    <section class="checkin" id="checkin">
+
+        <h2 class="section-heading">Web Check-in</h2>
+
+        <div class="info-box">
+            <p>
+                Get ready for your journey. Review your travel
+                details before heading to the airport.
+            </p>
+
+            <a href="#booking" class="info-link">
+                View Flight Details
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ===== 8. ABOUT SECTION ===== -->
+    <section class="about" id="about">
+
+        <h2 class="section-heading">About Air India</h2>
+
+        <p>
+            Discover the joy of travelling with Air India.
+            Explore new destinations and make your journey memorable.
+            This is a beginner-friendly airline homepage design
+            created using HTML and CSS.
+        </p>
+
+    </section>
+
+
+    <!-- ===== 9. LOGIN SECTION ===== -->
+    <section class="login-section" id="login">
+
+        <h2 class="section-heading">Welcome to Air India</h2>
+
+        <div class="info-box">
+            <p>
+                Welcome! This is a demonstration homepage.
+                Real account login is not connected.
+            </p>
+
+            <a href="#home" class="info-link">
+                Back to Home
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ===== 10. FOOTER ===== -->
+    <footer class="footer">
+
+        <h2>✈ AIR INDIA</h2>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#booking">Book Flights</a>
+            <a href="#offers">Offers</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About Us</a>
+        </div>
+
+        <p>© 2026 Air India Clone — Practice Project</p>
+        <p>Explore the world, one journey at a time.</p>
+
+    </footer>
+
+</body>
+</html>
