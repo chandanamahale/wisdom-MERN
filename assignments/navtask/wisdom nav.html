@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Sprouts Navbar</title>
+    
+</head>
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.logo h2 {
+    color: #172554;
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f59e0b;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #f59e0b;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #ed5113;
+    color: white;
+    padding: 11px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: #f59e0b;
+}
+
+@media (max-width: 1100px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+    </style>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+        <img src="./wisdom.webp" width="90px" height="80px">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Internship</a></li>
+            <li><a href="#">Placement</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Hire From Us</a></li>
+            
+        </ul>
+
+        <a href="#" class="btn">contact us</a>
+
+    </nav>
+
+</body>
+</html>

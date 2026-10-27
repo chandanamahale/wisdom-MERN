@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+    .navbar
+    {
+        display: flex;
+        justify-content:space-between;
+        padding: 15px 7%;
+        align-items: center;
+        gap: 25px;
+         background-color: white;
+    }
+    .logo {
+    color: #f84464;
+    font-size: 27px;
+    white-space: nowrap;
+}
+   
+   
+.search {
+    width: 55%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+    .signin
+    {
+         background-color: #f84464;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .menu
+    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 15px 7%;
+    }
+    .links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.links a:hover {
+    color: #f84464;
+}
+
+
+.location select {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.location select option {
+    background-color: white;
+    color: #333;
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .search {
+        width: 100%;
+        order: 3;
+    }
+
+    .menu {
+        padding: 15px;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .links {
+        gap: 15px;
+    }
+}
+</style>
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">bookmyshow</h2>
+
+        <input type="text"
+               placeholder="Search for movies, events..."
+               class="search">
+
+        <button class="signin">Sign in</button>
+    </nav>
+
+    <div class="menu">
+        <div class="links">
+            <a href="#">Movies</a>
+            <a href="#">Stream</a>
+            <a href="#">Events</a>
+            <a href="#">Plays</a>
+            <a href="#">Sports</a>
+            <a href="#">Activities</a>
+        </div>
+
+        
+<div class="location">
+    <select name="city" id="city">
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+</div>
+</body>
+</html>

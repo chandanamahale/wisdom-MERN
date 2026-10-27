@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisdom Sprouts Navbar</title>
+    <title>LinkedIn Navbar</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
     
-    <style>
-        
 * {
     margin: 0;
     padding: 0;
@@ -16,128 +17,98 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f3f2ef;
 }
 
 .navbar {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
     background-color: white;
-    padding: 15px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Logo */
-.logo {
+.left {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #173b65;
-    font-size: 22px;
-    font-weight: bold;
 }
 
-.logo-icon {
-    background-color: #f5a623;
+.logo {
+    background-color: #0a66c2;
     color: white;
-    padding: 8px 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 30px;
+}
+
+.left input {
+    padding: 10px;
+    border: none;
     border-radius: 5px;
+    background-color: #edf3f8;
+    width: 250px;
 }
 
-/* Search box */
-.search-box input {
-    width: 220px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-}
-
-/* Navigation links */
-.nav-links {
+.right {
     display: flex;
     align-items: center;
     gap: 25px;
-    list-style: none;
 }
 
-.nav-links a {
+.right a {
     text-decoration: none;
-    color: #333;
-    font-size: 15px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
 }
 
-.nav-links a:hover {
-    color: #f5a623;
+.right a span {
+    font-size: 12px;
+    margin-top: 4px;
 }
 
-/* Login button */
-.login-btn {
-    background-color: #f5a623;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
+.right a:hover {
+    color: black;
 }
 
-.login-btn:hover {
-    background-color: #d98b0b;
-}
-
-/* Responsive design */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
         gap: 15px;
-        padding: 15px 20px;
     }
 
-    .nav-links {
+    .right {
         gap: 15px;
         flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-    }
-
-    .search-box input {
-        width: 250px;
-    }
-
-    .nav-links {
         justify-content: center;
     }
-}
 
-    </style>
-</head>
+    .left input {
+        width: 150px;
+    }
+}
+</style>
 <body>
 
     <nav class="navbar">
 
-        <div class="logo">
-            <span class="logo-icon">W</span>
-            <span>Wisdom Sprouts</span>
+        <div class="left">
+            <h1 class="logo">in</h1>
+            <input type="text" placeholder="Search">
         </div>
 
-        <div class="search-box">
-            <input type="text" placeholder="Search courses, training...">
+        <div class="right">
+            <a href="#">⌂<span>Home</span></a>
+            <a href="#">♙<span>My Network</span></a>
+            <a href="#">▣<span>Jobs</span></a>
+            <a href="#">✉<span>Messaging</span></a>
+            <a href="#">♧<span>Notifications</span></a>
+            <a href="#">👤<span>Me</span></a>
         </div>
-
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Internship</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-        <a href="#" class="login-btn">Login</a>
 
     </nav>
 
