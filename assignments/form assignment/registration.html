@@ -1,0 +1,217 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Registration Box */
+.container {
+    width: 260px;
+    background-color: #eeeeee;
+    padding: 15px 22px 25px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 7px #999;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: normal;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Account Type */
+.account-type {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.account-type label,
+.gender label {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="radio"] {
+    accent-color: #4161b5;
+    width: 15px;
+    height: 15px;
+}
+
+/* Input Fields */
+.input-box {
+    display: flex;
+    margin-bottom: 10px;
+    height: 32px;
+}
+
+.icon {
+    width: 35px;
+    background-color: #4161b5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px 0 0 3px;
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 12px;
+    outline: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.input-box input:focus {
+    border-color: #4161b5;
+}
+
+/* Gender */
+.gender {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 18px 0 28px;
+}
+
+/* Bottom Section */
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.terms {
+    font-size: 9px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.terms a {
+    color: #4161b5;
+}
+
+button {
+    background-color: #4161b5;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #304b91;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Registration</h2>
+
+    <form>
+
+        <!-- Account Type -->
+        <div class="account-type">
+
+            <label>
+                <input type="radio" name="account" checked>
+                Personal
+            </label>
+
+            <label>
+                <input type="radio" name="account">
+                Company
+            </label>
+
+        </div>
+
+        <!-- Email -->
+        <div class="input-box">
+            <div class="icon">✉</div>
+            <input type="email" placeholder="Email" required>
+        </div>
+
+        <!-- Name -->
+        <div class="input-box">
+            <div class="icon">♟</div>
+            <input type="text" placeholder="Name" required>
+        </div>
+
+        <!-- Password -->
+        <div class="input-box">
+            <div class="icon">⬟</div>
+            <input type="password" placeholder="Password" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="gender">
+
+            <label>
+                <input type="radio" name="gender" checked>
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender">
+                Female
+            </label>
+
+        </div>
+
+        <!-- Terms and Register -->
+        <div class="bottom">
+
+            <p class="terms">
+                By clicking Register, you agree on our
+                <a href="#">terms and condition</a>.
+            </p>
+
+            <button type="submit">Register</button>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+```

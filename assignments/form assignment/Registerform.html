@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        .h1
+        {
+            font-size: 50px;
+            color: black;
+        }
+        .form
+        {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #cccccc;
+        }
+        .form input
+        {
+            display: inline-block;
+            width: 50%;
+        }
+        .form button
+        {
+            width: 70px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <h1 class="h1"> Register </h1>
+        <p>kindly fill in this form to Register</p>
+        <label for="label">user name </label>
+        <input type="text" id="label" placeholder="enter user name">
+        <br>
+        <br>
+        <label for="emailA"> Email</label>
+        <input type="email" id="emailA" placeholder="enter">
+        <br>
+        <br>
+        <label for="pass">password</label>
+        <input type="password" id="pass" placeholder="enter password">
+        <br>
+        <br>
+        <label for="repeatpass">Repeat password</label>
+        <input type="password" id="repeatpass" placeholder="Repeat password">
+        <br>
+        <br>
+        <button>Register</button>
+        <p>Already have an account <a href="#" >login </a></p>
+    </form>
+</body>
+</html>

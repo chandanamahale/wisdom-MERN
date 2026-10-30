@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f4f8;
+            padding: 30px 15px;
+        }
+
+        /* Instagram Login Form */
+        .login-container {
+            display: flex;
+            max-width: 850px;
+            margin: 0 auto 30px;
+            background-color: #101820;
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 50%;
+            padding: 45px 25px;
+            text-align: center;
+            background-color: #0b0f10;
+        }
+
+        .logo {
+            font-size: 35px;
+            color: #e1306c;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .left-section h2 {
+            font-size: 23px;
+            line-height: 1.7;
+        }
+
+        .left-section span {
+            color: #ff4f91;
+        }
+
+        .right-section {
+            width: 50%;
+            padding: 45px 30px;
+            background-color: #17232c;
+        }
+
+        .right-section h3 {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #b8c2cc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .login-container input {
+            background-color: transparent;
+            color: white;
+            border-color: #52616b;
+        }
+
+        .login-container input::placeholder {
+            color: #c4cbd1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4169e1;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #254fc4;
+        }
+
+        .login-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .login-links a {
+            color: #66baff;
+            text-decoration: none;
+        }
+
+        /* Registration Form */
+        .registration-container {
+            background-color: #4169f5;
+            padding: 35px 15px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .registration-form {
+            background-color: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .registration-form h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .registration-form h4 {
+            color: #777;
+            font-size: 15px;
+            margin: 22px 0 15px;
+        }
+
+        .registration-form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        .registration-form input,
+        .registration-form select,
+        .registration-form textarea {
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+
+        .registration-form textarea {
+            resize: vertical;
+        }
+
+        .registration-form button {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                flex-direction: column;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+
+            .registration-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Instagram Login Form -->
+    <div class="login-container">
+
+        <div class="left-section">
+            <div class="logo">◎ Instagram</div>
+
+            <h2>
+                See everyday moments from
+                your <span>close friends.</span>
+            </h2>
+        </div>
+
+        <div class="right-section">
+            <h3>Log into Instagram</h3>
+
+            <form>
+                <input type="text"
+                       placeholder="Mobile number, username or email"
+                       required>
+
+                <input type="password"
+                       placeholder="Password"
+                       required>
+
+                <button type="submit">Log in</button>
+            </form>
+
+            <div class="login-links">
+                <p><a href="#">Forgot password?</a></p>
+                <br>
+                <p><a href="#">Log in with Facebook</a></p>
+                <br>
+                <p><a href="#registration">Create new account</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Student Registration Form -->
+    <div class="registration-container" id="registration">
+
+        <div class="registration-form">
+
+            <h2>Registration</h2>
+            <hr>
+
+            <form>
+
+                <h4>Personal Details</h4>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone"
+                       placeholder="Enter your mobile number" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <h4>Academic Details</h4>
+
+                <label for="college">College Name</label>
+                <input type="text" id="college"
+                       placeholder="Enter college name" required>
+
+                <label for="course">Course</label>
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option>Computer Engineering</option>
+                    <option>Information Technology</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical Engineering</option>
+                </select>
+
+                <label for="year">Academic Year</label>
+                <select id="year" required>
+                    <option value="">Select Year</option>
+                    <option>First Year</option>
+                    <option>Second Year</option>
+                    <option>Third Year</option>
+                    <option>Final Year</option>
+                </select>
+
+                <label for="address">Address</label>
+                <textarea id="address" rows="3"
+                          placeholder="Enter your address"></textarea>
+
+                <button type="submit">Register</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
