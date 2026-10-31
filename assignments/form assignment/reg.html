@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #e8f0e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg ,#091f06,#add714,#0f5004
+            );
+           
+        }
+
+        .container {
+            display: flex;
+            width: 65%;
+            max-width: 1100px;
+            min-height: 550px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px #888;
+            overflow: hidden;
+            
+        }
+
+        .left {
+            width: 50%;
+            background: linear-gradient(135deg, #071b65, #009fe3);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            border-radius: 30px 150px 150px 30px;
+        }
+
+        .left h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            margin-bottom: 30px;
+        }
+
+        .left button {
+            padding: 12px 45px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .right {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right h1 {
+            margin-bottom: 25px;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social button {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .right p {
+            margin: 10px 0 20px;
+            color: #777;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #e5e5e5;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .register {
+            padding: 13px 45px;
+            background: #c4d000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media(max-width: 700px) {
+            .container {
+                flex-direction: column;
+                width: 95%;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .left {
+                border-radius: 30px 30px 100px 100px;
+                min-height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <h1>Welcome Back!</h1>
+
+            <p>Please enter your personal details<br>
+            to use all features</p>
+
+            <button> SIGN IN </button>
+        </div>
+
+        <div class="right">
+
+            <h1>Register With</h1>
+
+            <div class="social">
+                <button>G</button>
+                <button>f</button>
+                <button>◎</button>
+                <button>in</button>
+            </div>
+
+            <h1>OR</h1>
+
+            <p>Fill in your information for registration</p>
+
+            <input type="text" placeholder="Name">
+
+            <input type="email" placeholder="Email">
+
+            <input type="password" placeholder="Password">
+
+            <button class="register">SIGN UP</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Championship Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            padding: 25px;
+            background: linear-gradient(
+                to bottom,
+                #9292ed,
+                #80b9e5,
+                #91ddc5
+            );
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #18204f;
+            font-size: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            color: #263b70;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #f5f5e9;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row div {
+            width: 50%;
+        }
+
+        .captcha {
+            background: white;
+            width: 250px;
+            padding: 15px;
+            margin: 25px auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha input {
+            width: auto;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            padding: 12px 30px;
+            background-color: #0879d1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #055da5;
+        }
+
+        @media(max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .row div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>School Championship Registration Form</h1>
+
+    <form>
+
+        <label>School Name *</label>
+        <input type="text" placeholder="Enter School Name" required>
+
+        <div class="row">
+            <div>
+                <label>Student Name *</label>
+                <input type="text" placeholder="First Name" required>
+            </div>
+
+            <div>
+                <label>Last Name *</label>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label>Parent Name *</label>
+                <input type="text" placeholder="First Name" required>
+            </div>
+
+            <div>
+                <label>Last Name *</label>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <label>Mobile Number *</label>
+        <input type="tel" placeholder="Enter Mobile Number"
+               pattern="[0-9]{10}" required>
+
+        <label>Email Address *</label>
+        <input type="email" placeholder="Enter Email Address" required>
+
+        <label>Address *</label>
+        <textarea placeholder="Enter Address" required></textarea>
+
+        <div class="captcha">
+            <input type="checkbox">
+            <span>I'm not a robot</span>
+        </div>
+
+        <button type="submit">➤ Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
