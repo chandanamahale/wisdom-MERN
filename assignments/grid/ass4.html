@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<style>
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 70px 300px 60px;
+
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+
+    gap: 10px;
+}
+
+header {
+    grid-area: header;
+    background: #3498db;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    background: #d5f5e3;
+}
+
+main {
+    grid-area: main;
+    background: #fef9e7;
+}
+
+aside {
+    grid-area: aside;
+    background: #fadbd8;
+}
+
+footer {
+    grid-area: footer;
+    background: #34495e;
+    color: white;
+}
+
+header, nav, main, aside, footer {
+    padding: 15px;
+    border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+
+<header>
+    <h2>Student Dashboard</h2>
+</header>
+
+<nav>
+    <h3>Navigation</h3>
+    <p>Home</p>
+    <p>Profile</p>
+    <p>Courses</p>
+    <p>Results</p>
+    <p>Settings</p>
+</nav>
+
+<main>
+    <h2>Welcome Student!</h2>
+    <h3>My Academic Information</h3>
+    <p>Name:chandana mahale</p>
+    <p>Department: Computer Engineering</p>
+    <p>Year: fourth  Year</p>
+    <p>Subject: Web Technology</p>
+
+    <h3>Announcements</h3>
+    <p>Assignment submission is due this Friday.</p>
+    <p>Internal examination starts next week.</p>
+</main>
+
+<aside>
+    <h3>Quick Updates</h3>
+    <p>Attendance: 85%</p>
+    <p>Assignments: 4</p>
+    <p>Upcoming Exam: Monday</p>
+</aside>
+
+<footer>
+    <p>© 2026 Student Dashboard</p>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Assignment</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkgreen;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px 300px 250px;
+            gap: 12px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .img1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .img2 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .img3 {
+            grid-column: 3;
+            grid-row: 1 / 3;
+        }
+
+        .img4 {
+            grid-column: 1 / 3;
+            grid-row: 2;
+        }
+
+        .img5 {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+
+        .img6 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4, 180px);
+            }
+
+            .img3, .img4, .img5, .img6 {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Fruit Image Gallery</h2>
+
+    <div class="container">
+
+        <img class="img1"
+             src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500"
+             alt="Apples">
+
+        <img class="img2"
+             src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500"
+             alt="Bananas">
+
+        <img class="img3"
+             src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500"
+             alt="Oranges">
+
+        <img class="img4"
+             src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500"
+             alt="Grapefruit">
+
+        <img class="img5"
+             src="https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=500"
+             alt="Papaya">
+
+        <img class="img6"
+             src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=500"
+             alt="Pineapples">
+
+    </div>
+
+</body>
+</html>

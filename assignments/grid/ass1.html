@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: white;
+        }
+
+        .box:nth-child(1) { background: red; }
+        .box:nth-child(2) { background: blue; }
+        .box:nth-child(3) { background: green; }
+        .box:nth-child(4) { background: orange; }
+        .box:nth-child(5) { background: purple; }
+        .box:nth-child(6) { background: brown; }
+        .box:nth-child(7) { background: pink; }
+        .box:nth-child(8) { background: teal; }
+        .box:nth-child(9) { background: black; }
+    </style>
+</head>
+<body>
+
+<h2>Basic Grid Layout</h2>
+
+<div class="container">
+    <div class="box">chandana</div>
+    <div class="box">vandana</div>
+    <div class="box">priyanka</div>
+    <div class="box">pradnyesh</div>
+    <div class="box">aditi</div>
+    <div class="box">riya</div>
+    <div class="box">saurav</div>
+    <div class="box">krushna</div>
+    <div class="box">sandip</div>
+</div>
+
+</body>
+</html>
